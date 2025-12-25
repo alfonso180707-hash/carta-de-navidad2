@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carta de Navidad 💖</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #b11226, #2d0b0b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+            color: #fff;
+        }
+
+        .carta {
+            width: 90%;
+            max-width: 720px;
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 35px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.45);
+            text-align: center;
+            animation: aparecer 1.5s ease;
+        }
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 2.4em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 35px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin: 15px 0;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .galeria img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+            transition: transform 0.5s ease;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.06);
+        }
+
+        button {
+            background: #ff4d6d;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background: #ff6b81;
+            transform: scale(1.05);
+        }
+
+        .mensaje-final {
+            display: none;
+            margin-top: 25px;
+            font-size: 1.15em;
+            animation: aparecer 1s ease;
+        }
+
+        .firma {
+            margin-top: 40px;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="carta">
+
+    <h1>🎄 Feliz Navidad 🎄</h1>
+    <p><strong>Para mi Zoé hermosa 💖</strong></p>
+
+    <p>
+        Esta Navidad quiero recordarte lo mucho que significas para mí.  
+        Cada momento a tu lado llena mi corazón de paz, alegría y amor.
+    </p>
+
+    <p>
+        Gracias por hacer esta Navidad tan mágica 🎄🩷  
+        Por tu sonrisa, tu apoyo y por ser la persona tan increíble que eres.
+    </p>
+
+    <h2>Nuestros recuerdos 💖</h2>
+
+    <div class="galeria">
+        <img src="foto1.jpg" alt="Nuestro recuerdo 1">
+        <img src="foto2.jpg" alt="Nuestro recuerdo 2">
+    </div>
+
+    <button onclick="mostrarMensaje()">Un último mensaje ❤️</button>
+
+    <div class="mensaje-final" id="mensajeFinal">
+        <p>
+            Te amo muchísimo mi amor, gracias por ser mi novia muñeca 💕  
+            Prometo cuidar de nuestro amor hoy y siempre.
+        </p>
+    </div>
+
+    <div class="firma">
+        Con todo mi cariño,<br>
+        Alfonso ❤️
+    </div>
+
+</div>
+
+<script>
+    function mostrarMensaje() {
+        document.getElementById("mensajeFinal").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
